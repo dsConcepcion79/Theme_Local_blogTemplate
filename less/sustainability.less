@@ -1,0 +1,317 @@
+/**************************************************************************************************
+ *
+ *  @Section: Sustainability Page Styles
+ *
+***************************************************************************************************/
+
+.sustainability {
+
+  .sustainability-row {
+
+    margin: 0 0 20px;
+
+    &:first-child {
+
+      .top {
+        height: 40%;
+      }
+
+      .bottom {
+        height: 60%;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      .top {
+        height: 65%;
+        overflow: hidden;
+        padding-bottom: 0;
+
+        .sustainability-info {
+          position: absolute;
+          top: 10%;
+          right: 10%;
+          width: 50%;
+
+          @media only screen and (max-width: @breakpoint) {
+            position: relative;
+            top: inherit;
+            right: inherit;
+            width: 100%;
+            padding: 50px 10%;
+            background-color: @white;
+          }
+
+          span,
+          p {
+            color: @white;
+
+            @media only screen and (max-width: @breakpoint) {
+              color: @text;
+            }
+          }
+
+          span {
+            display: block;
+            font-size: 3rem;
+            margin: 0 0 10px;
+          }
+
+          p {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .bottom {
+        height: 35%;
+        padding-top: 2%;
+      }
+    }
+
+    &.full-bleed {
+      position: relative;
+
+      img {
+
+        @media only screen and (max-width: @breakpoint) {
+          margin-bottom: 20px;
+        }
+      }
+
+      .caption-container {
+        left: 5%;
+        max-width: 30%;
+        .center-vertical();
+
+        @media only screen and (max-width: @breakpoint) {
+          position: relative;
+          transform: none;
+          top: inherit;
+          right: inherit;
+          bottom: inherit;
+          max-width: inherit;
+          left: 0;
+          padding: 40px;
+          background-color: @white;
+        }
+
+        span,
+        p {
+          color: #383d42;
+        }
+
+        span {
+          display: block;
+          font-size: 3rem;
+          margin: 0 0 10px;
+        }
+
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .container {
+      padding: 30px 0 200px;
+
+      @media only screen and (max-width: @breakpoint) {
+        padding: 20px 0 100px;
+      }
+    }
+
+    .sustainability-cols {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      @media only screen and (max-width: @breakpoint) {
+        display: block;
+      }
+
+      &:after {
+        .clear;
+      }
+
+      .col {
+        position: relative;
+        float: left;
+        margin-right: 1.5%;
+
+        @media only screen and (max-width: @breakpoint) {
+          float: none;
+          width: 100%;
+          margin: 0 0 20px;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.large {
+          width: 58.5%;
+
+          @media only screen and (max-width: @breakpoint) {
+            width: 100%;
+          }
+        }
+
+        &.small {
+          width: 40%;
+
+          @media only screen and (max-width: @breakpoint) {
+            width: 100%;
+          }
+
+          @media only screen and (max-width: @breakpoint) {
+            height: 60vh;
+          }
+
+          .top {
+            position: relative;
+            height: 40%;
+          }
+
+          .bottom {
+            position: relative;
+            height: 60%;
+            padding-top: 5%;
+
+            &:after {
+              .clear;
+            }
+          }
+
+          .img-container {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+
+            @media only screen and (max-width: @breakpoint) {
+              margin-bottom: 20px;
+            }
+          }
+
+          .text-box {
+            width: 100%;
+            height: 100%;
+            background-color: @white;
+
+            .text-box-copy {
+              width: 70%;
+              .center-both();
+
+              span {
+                font-size: 3rem;
+                display: block;
+                margin: 0 0 10px;
+                color: @green;
+              }
+
+              p {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+
+        .left,
+        .right {
+          position: relative;
+          float: left;
+          width: 49%;
+          height: 100%;
+
+          @media only screen and (max-width: @breakpoint) {
+            width: 100%;
+          }
+        }
+
+        .left {
+          margin-right: 2%;
+          background-color: @blue;
+
+          @media only screen and (max-width: @breakpoint) {
+            padding-bottom: 50%;
+            margin: 0 0 20px;
+          }
+        }
+
+        .right {
+
+          .img-container {
+            padding: 0;
+            height: 100%;
+
+            @media only screen and (max-width: @breakpoint) {
+              height: inherit;
+              padding-bottom: 50%;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .box-info {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+
+          span {
+            display: block;
+            opacity: 0.5;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            color: @white;
+            font-family: @font-main-medium;
+          }
+
+          a {
+            font-size: 3vw;
+            text-decoration: none;
+            color: @white;
+            font-family: @font-main-semibold;
+            .arrow-white;
+
+            @media only screen and (min-width: @design-width) {
+              font-size: 2.4rem;
+            }
+
+            @media only screen and (max-width: @breakpoint) {
+              font-size: 2.4rem;
+            }
+          }
+        }
+
+        .img-container {
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 0;
+          padding-bottom: 90%;
+          overflow: hidden;
+
+          @media only screen and (max-width: @breakpoint) {
+            margin-bottom: 20px;
+          }
+
+          img {
+            min-width: 100%;
+            min-height: 100%;
+            max-width: 125%;
+            .center-both;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+/**************************************************************************************************
+ *
+ *  @Section: Global Reach Facts Styles
+ *
+***************************************************************************************************/
+
+.global-reach-facts {
+	background-image: url(/../img/bg-map.png);
+	background-color: #f6f6f6;
+	background-position: center center;
+	background-size: cover;
+	margin: 120px 0 70px;
+
+	@media only screen and (max-width: @breakpoint) {
+		margin: 60px 0;
+	}
+
+	.container {
+		padding: 150px 0 200px;
+
+		@media only screen and (max-width: @breakpoint) {
+			padding: 40px 0;
+			width: 100%;
+		}
+	}
+
+	.header-text {
+		margin: 0 0 60px;
+
+		@media only screen and (max-width: @breakpoint) {
+			width: @mobile-width;
+			margin: 0 auto 30px;
+		}
+	}
+
+	.facts-slider {
+		position: relative;
+		height: 55vw;
+		max-height: 500px;
+
+		@media only screen and (max-width: @breakpoint) {
+			height: inherit;
+			max-height: inherit;
+			display: block;
+			flex-direction: initial;
+			flex-wrap: initial;
+		}
+
+		&:after {
+			.clear;
+		}
+
+		.slick-track {
+
+			@media only screen and (max-width: @breakpoint) {
+				display: flex;
+			}
+		}
+
+		.slide-container {
+			position: relative;
+		}
+
+		li {
+			position: relative;
+			float: left;
+			width: 16%;
+			height: 100%;
+			padding: 5% 2% 8%;
+			margin-right: 2%;
+			background-color: rgba(255,255,255,0.5);
+			transform: scale(1, 1);
+			.transition();
+
+			@media only screen and (max-width: @tablet-landscape) {
+				padding: 8% 2%;
+			}
+
+			@media only screen and (max-width: @breakpoint) {
+				width: inherit;
+				padding: 30px;
+				margin: 10px;
+				background-color: rgba(255,255,255,1);
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.active {
+				width: 46%;
+				height: 100%;
+				padding: 5% 4% 8%;
+				background-color: rgba(255,255,255,1);
+				transform: scale(1, 1.1);
+
+				@media only screen and (max-width: @breakpoint) {
+					width: inherit;
+					transform: none;
+					padding: 30px;
+				}
+
+				span {
+					font-size: 2.8rem;
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 1.8rem;
+					}
+				}
+
+				.slide-number {
+					left: -12px;
+					font-size: 10rem;
+					letter-spacing: -5px;
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 7rem;
+						left: -3px;
+					}
+				}
+
+				.slide-fact {
+					font-size: 3rem;
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 2.1rem;
+					}
+				}
+			}
+
+			p,
+			span {
+				color: @black;
+			}
+
+			span {
+				display: block;
+				font-size: 1.8rem;
+				margin: 0 0 30px;
+				font-family: @font-alt;
+
+				@media only screen and (max-width: @breakpoint) {
+					font-size: 2rem;
+					margin: 0 0 25px;
+				}
+			}
+
+			span,
+			.slide-fact,
+			.slide-number {
+				-webkit-transition: all 400ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+				-moz-transition: all 400ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+				-o-transition: all 400ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+				transition: all 400ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+
+				-webkit-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+				-moz-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+				-o-transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+				transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+			}
+
+			.slide-number {
+				position: relative;
+				left: -10px;
+				line-height: 1;
+				letter-spacing: -3px;
+				font-size: 5vw;
+				font-family: @font-alt;
+
+				@media only screen and (min-width: @design-width) {
+					font-size: 7rem;
+				}
+
+				@media only screen and (max-width: @breakpoint) {
+					font-size: 20vw;
+					left: -3px;
+				}
+			}
+
+			.slide-fact {
+				margin: 0 0 60px;
+				font-size: 2.1rem;
+				font-family: @font-main-semibold;
+
+				@media only screen and (max-width: @tablet-landscape) {
+					margin: 0 0 50px;
+				}
+
+				@media only screen and (max-width: @breakpoint) {
+					margin: 0 0 40px;
+				}
+			}
+
+			.slide-text {
+				font-size: 1.8vw;
+				max-width: 420px;
+				display: none;
+
+				@media only screen and (min-width: @design-width) {
+					font-size: 2.4rem;
+				}
+
+				@media only screen and (max-width: @breakpoint) {
+					display: block !important;
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+}
+
+.global-reach-facts + .module .container {
+	padding-top: 0;
+}

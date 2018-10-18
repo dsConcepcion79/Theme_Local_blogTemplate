@@ -1,0 +1,140 @@
+/**************************************************************************************************
+*
+*  @Section: Our Brands Styles
+*
+***************************************************************************************************/
+
+.our-brands {
+
+	&.bg-white {
+
+		.brand-list li img {
+			max-width: 100%;
+			max-height: inherit;
+
+			@media only screen and (max-width: @breakpoint) {
+				max-width: 90%;
+			}
+		}
+	}
+
+	.container {
+		padding: 80px 0;
+	}
+
+	.heading-container {
+		float: left;
+		width: 30%;
+		text-align: left;
+		margin: 0 12% 40px 0;
+		border-top: 4px solid @black;
+
+		@media only screen and (max-width: @breakpoint) {
+			float: none;
+			width: 100%;
+			margin: 0 0 20px;
+		}
+
+		h2 {
+			display: inline-block;
+			margin: 20px 0;
+			font-size: 4.6rem;
+			text-transform: uppercase;
+			font-family: @font-alt;
+
+			@media only screen and (max-width: @breakpoint) {
+				font-size: 3.5rem;
+			}
+		}
+
+		p {
+			font-size: 1.8rem;
+			margin: 0 0 10px;
+		}
+	}
+
+	.brand-list {
+		float: left;
+		width: 58%;
+
+		@media only screen and (max-width: @breakpoint) {
+			float: none;
+			width: 100%;
+		}
+
+		&:after {
+			.clear;
+		}
+
+		li {
+			position: relative;
+			margin-right: 2%;
+			margin-bottom: 65px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 23.66%;
+			margin-left: -4px;
+
+			&:nth-child(4n) {
+				margin-right: 0;
+
+				@media only screen and (max-width: @breakpoint) {
+					margin-right: 4%;
+				}
+			}
+
+			&:nth-child(4n+1) {
+				clear: both;
+
+				@media only screen and (max-width: @breakpoint) {
+					clear: none;
+				}
+			}
+
+			&:nth-child(2n) {
+
+				@media only screen and (max-width: @breakpoint) {
+					margin-right: 0;
+				}
+			}
+
+			&:nth-child(2n+1) {
+
+				@media only screen and (max-width: @breakpoint) {
+					clear: both;
+				}
+			}
+
+			@media only screen and (max-width: @breakpoint) {
+				width: 48%;
+				margin-bottom: 30px;
+				margin-right: 4%;
+			}
+
+			&.more {
+				width: 100%;
+				background-color: transparent;
+				margin: 20px 0 60px;
+				padding: 0;
+				text-align: center;
+				cursor: pointer;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: @red;
+				font-family: @font-main-semibold;
+			}
+
+			img {
+				max-width: 80%;
+				margin: auto;
+			}
+		}
+	}
+}
+
+section.bg-white + .our-brands.bg-white {
+
+	.container {
+		margin-top: 40px;
+	}
+}

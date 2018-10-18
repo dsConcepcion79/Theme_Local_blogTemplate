@@ -1,0 +1,397 @@
+/**************************************************************************************************
+ *
+ *  @Section: Footer Styles
+ *
+***************************************************************************************************/
+
+footer {
+	position: relative;
+
+	.container {
+		padding: 50px 30px;
+		background-color: @off-black;
+
+		@media only screen and (max-width: @breakpoint) {
+			width: 100%;
+		}
+	}
+
+	.logo-container {
+		position: relative;
+		margin: 0 0 70px;
+
+		@media only screen and (max-width: @breakpoint) {
+			margin: 0 0 40px;
+		}
+
+		.logo {
+			display: block;
+
+			img {
+				width: 160px;
+
+				@media only screen and (max-width: @breakpoint) {
+					margin: auto;
+				}
+			}
+		}
+	}
+
+	.footer-col-container {
+		position: relative;
+
+		&:after {
+			.clear;
+		}
+	}
+
+	.footer-left,
+	.footer-right {
+		position: relative;
+		float: left;
+
+		@media only screen and (max-width: @breakpoint) {
+			float: none;
+		}
+	}
+
+	.footer-left {
+		position: relative;
+		width: 60%;
+		padding-right: 5%;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 2px;
+			height: 100%;
+			background-color: #4f5155;
+
+			@media only screen and (max-width: @breakpoint) {
+				content: none;
+			}
+		}
+
+		@media only screen and (max-width: @tablet-landscape) {
+			width: 50%;
+		}
+
+		@media only screen and (max-width: @breakpoint) {
+			width: 100%;
+			padding: 0;
+			margin: 0 0 20px;
+		}
+
+		.cols {
+			position: relative;
+
+			&:after {
+				.clear;
+			}
+
+			.desktop-col-container {
+				position: relative;
+
+				.col {
+
+					&:last-child {
+
+						.nav {
+
+							li {
+								margin-bottom: 18px;
+
+								a {
+									font-size: 2.2rem;
+									letter-spacing: -1px;
+									font-family: @font-alt;
+
+									@media only screen and (max-width: @tablet-landscape) {
+										font-size: 1.8rem;
+									}
+								}
+							}
+						}
+					}
+
+					.nav {
+
+						li {
+
+							&:first-child {
+								margin-bottom: 19.5px;
+
+								a {
+									font-size: 2.2rem;
+									letter-spacing: -1px;
+									font-family: @font-alt;
+
+									@media only screen and (max-width: @tablet-landscape) {
+										font-size: 1.8rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.col {
+				float: left;
+				width: 33.33%;
+
+				&.desktop {
+
+					@media only screen and (max-width: @breakpoint) {
+						display: none;
+					}
+				}
+
+				&.mobile {
+					display: none;
+
+					@media only screen and (max-width: @breakpoint) {
+						display: block;
+					}
+				}
+
+				@media only screen and (max-width: @breakpoint) {
+					float: none;
+					width: 100%;
+				}
+
+				.nav {
+
+					li {
+						display: block;
+						vertical-align: middle;
+						margin: 0 0 13.5px;
+
+						@media only screen and (max-width: @breakpoint) {
+							text-align: center;
+							margin: 0 0 30px;
+						}
+
+						&:last-child {
+							margin: 0 !important;
+						}
+
+						a {
+							display: block;
+							letter-spacing: 1px;
+							text-transform: uppercase;
+							color: #92989d;
+							font-size: 1.2rem;
+							font-family: @font-main;
+							color: @white;
+							.transition();
+
+							@media only screen and (max-width: @breakpoint) {
+								font-size: 3rem;
+								letter-spacing: -1px;
+								font-family: @font-alt;
+							}
+
+							@media only screen and (min-width: @breakpoint) {
+
+								&:hover {
+									color: @red;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.legal {
+
+			@media only screen and (max-width: @breakpoint) {
+				text-align: center;
+			}
+
+			.nav {
+				margin-bottom: 20px;
+
+				li {
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 10px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					a {
+						color: #92989d;
+						font-size: 1.4rem;
+						opacity: 0.6;
+						color: @white;
+						font-family: @font-main;
+						.transition();
+
+						@media only screen and (min-width: @breakpoint) {
+
+							&:hover {
+								opacity: 1;
+								color: @red;
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				opacity: 0.6;
+				color: @white;
+
+				@media only screen and (max-width: @breakpoint) {
+					width: 90%;
+					margin: auto;
+				}
+			}
+		}
+
+		.social {
+			margin: 50px 0 0;
+
+			@media only screen and (max-width: @breakpoint) {
+				text-align: center;
+			}
+
+			ul {
+
+				&:after {
+					.clear;
+				}
+
+				li {
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 5%;
+
+					@media only screen and (max-width: @breakpoint) {
+						margin-right: 35px;
+					}
+
+					&:last-child {
+						margin: 0;
+					}
+
+					svg {
+						width: 13px;
+
+						@media only screen and (min-width: @breakpoint) {
+
+							&:hover {
+
+								path,
+								rect {
+									fill: @red;
+								}
+							}
+						}
+
+						@media only screen and (max-width: @breakpoint) {
+							width: 20px;
+						}
+
+						path,
+						rect {
+							stroke: transparent;
+							fill: #92989d;
+							.transition();
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer-right {
+		width: 40%;
+		padding-left: 5%;
+
+		@media only screen and (max-width: @breakpoint) {
+			display: none;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -2px;
+			width: 2px;
+			height: 100%;
+			background-color: #4f5155;
+
+			@media only screen and (max-width: @breakpoint) {
+				content: none;
+			}
+		}
+
+		@media only screen and (max-width: @tablet-landscape) {
+			width: 50%;
+		}
+
+		@media only screen and (max-width: @breakpoint) {
+			width: 100%;
+			padding: 0;
+		}
+
+		.locations {
+
+			&:after {
+				.clear;
+			}
+
+			.location {
+				float: left;
+				width: 45%;
+				margin-right: 10%;
+				margin-bottom: 40px;
+				color: @white;
+
+				&:nth-child(2n) {
+					margin-right: 0;
+				}
+
+				&:nth-child(2n+1) {
+					clear: both;
+				}
+
+				&:nth-last-child(-n+2) {
+					margin-bottom: 0;
+				}
+
+				.loc-name {
+					display: block;
+					font-size: 2.2rem;
+					margin-bottom: 10px;
+					text-transform: uppercase;
+					color: @white;
+					letter-spacing: -1px;
+					font-family: @font-alt;
+
+					@media only screen and (max-width: @tablet-landscape) {
+						font-size: 1.8rem;
+					}
+				}
+
+				p {
+					opacity: 0.8;
+					font-size: 1.4rem;
+				}
+
+				a {
+					opacity: 0.8;
+					color: @white;
+				}
+			}
+		}
+	}
+}

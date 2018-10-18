@@ -1,0 +1,348 @@
+/**************************************************************************************************
+*
+*  @Section: Comoany Hero Styles
+*
+***************************************************************************************************/
+
+.company-hero {
+	margin-top: -122px;
+
+	@media only screen and (max-width: @breakpoint) {
+		margin-top: 0;
+	}
+
+	.container {
+		padding-top: 0;
+		max-width: inherit;
+		width: 100%;
+	}
+
+	.img-container {
+		position: relative;
+		overflow: hidden;
+		height: 50vw;
+		max-height: 650px;
+
+		@media only screen and (max-width: @breakpoint) {
+			height: 58vw;
+			max-height: 300px;
+		}
+
+		img {
+			min-width: 100%;
+			min-height: 100%;
+			max-width: 125%;
+			.center-both();
+
+			@media only screen and (max-width: @breakpoint) {
+				min-width: 150%;
+				min-height: 100%;
+				max-height: 140%;
+				max-width: inherit;
+			}
+		}
+	}
+
+	&.no-stats {
+
+		.company-info-container {
+
+			.company {
+				padding: 0;
+				margin: 0;
+				border: none;
+
+				.company-name {
+
+					p {
+						margin: 0 0 20px;
+					}
+
+					a {
+						display: block;
+					}
+				}
+			}
+
+			.company-info {
+				display: none;
+			}
+		}
+	}
+
+	.company-info-container {
+		position: relative;
+		width: @default-width;
+		max-width: @max-width;
+		margin: -80px auto 0;
+		z-index: 1;
+
+		@media only screen and (max-width: @breakpoint) {
+			width: @mobile-width;
+		}
+
+		.company {
+			position: relative;
+			margin: 0 0 20px;
+			background-color: @white;
+
+			@media only screen and (max-width: @breakpoint) {
+				margin: 0 0 15px;
+			}
+
+			&:after {
+				.clear;
+			}
+
+			.logo-heading-container,
+			.company-name {
+				float: left;
+			}
+
+			.logo-heading-container {
+				width: 24%;
+				padding-bottom: 24%;
+				height: 0;
+
+				@media only screen and (max-width: @breakpoint) {
+					width: 100%;
+					padding-bottom: 50%;
+				}
+
+				.logo-container {
+					position: relative;
+					float: left;
+					width: 100%;
+					height: 0;
+					padding-bottom: 100%;
+					background-color: @white;
+
+					@media only screen and (max-width: @breakpoint) {
+						float: none;
+						padding-bottom: 50%;
+					}
+
+					.box {
+
+						&:after {
+							.clear;
+						}
+					}
+
+					img {
+						max-width: 75%;
+						max-height: 30%;
+						.center-both();
+
+						@media only screen and (max-width: @breakpoint) {
+							max-height: 40%;
+						}
+					}
+				}
+
+				p {
+					display: none;
+					width: 64%;
+					margin-left: -4px;
+					line-height: 1.2;
+					vertical-align: middle;
+					font-size: 8.5vw;
+					color: @off-black;
+					font-family: @font-main-bold;
+
+					@media only screen and (max-width: @breakpoint) {
+						vertical-align: middle;
+						margin-left: -4px;
+					}
+				}
+			}
+
+			.company-name {
+				width: 72%;
+				padding: 40px;
+
+				@media only screen and (max-width: @tablet-landscape) {
+					padding: 20px;
+				}
+
+				@media only screen and (max-width: @breakpoint) {
+					width: 100%;
+				}
+
+				h1 {
+					display: none;
+					font-size: 7.6rem;
+					margin: 0 0 30px;
+					line-height: 0.6;
+
+					@media only screen and (max-width: @tablet-landscape) {
+						font-size: 5rem;
+					}
+
+					@media only screen and (max-width: @breakpoint) {
+						display: none;
+						font-size: 4rem;
+						line-height: 1;
+					}
+				}
+
+				p {
+					font-size: 2.4vw;
+					line-height: 1.3;
+					max-width: 700px;
+					color: #24272c;
+
+					@media only screen and (min-width: @design-width) {
+						font-size: 3.2rem;
+					}
+
+					@media only screen and (max-width: @breakpoint) {
+						max-width: 100%;
+						margin: 0 0 30px;
+						font-size: 2.2rem;
+					}
+				}
+
+				a {
+					margin: 20px 0 0;
+					.link-red;
+				}
+			}
+		}
+
+		.company-info {
+			position: relative;
+			padding: 60px 40px 70px;
+			background-color: @white;
+
+			@media only screen and (max-width: @breakpoint) {
+				padding: 20px;
+			}
+
+			&:after {
+				.clear;
+			}
+
+			.blurb {
+				float: left;
+				width: 35%;
+				margin-right: 15%;
+
+				@media only screen and (max-width: @tablet-landscape) {
+					float: none;
+					width: 100%;
+					margin: 0 0 20px;
+				}
+
+				h3 {
+					font-size: 6.8rem;
+					text-transform: uppercase;
+					font-family: @font-alt;
+					color: @off-black !important;
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 12vw;
+					}
+				}
+
+				p {
+					font-size: 1.8rem;
+					line-height: 1.3;
+					margin: 0 0 30px;
+				}
+
+				a {
+					.link-red;
+
+					@media only screen and (max-width: @breakpoint) {
+						display: none;
+					}
+				}
+			}
+
+			.company-facts {
+				float: left;
+				width: 50%;
+
+				@media only screen and (max-width: @tablet-landscape) {
+					float: none;
+					width: 100%;
+				}
+
+				ul {
+
+					&:after {
+						.clear;
+					}
+
+					li {
+						float: left;
+						width: 33.33%;
+						margin: 0 0 50px;
+
+						@media only screen and (max-width: @breakpoint) {
+							width: 48%;
+							margin: 0 4% 40px 0;
+
+							&:nth-child(2n) {
+								margin-right: 0;
+							}
+						}
+
+						&:nth-last-child(-n+3) {
+							margin-bottom: 0;
+
+							@media only screen and (max-width: @breakpoint) {
+								margin-bottom: 40px;
+							}
+						}
+
+						&:nth-last-child(-n+2) {
+
+							@media only screen and (max-width: @breakpoint) {
+								margin-bottom: 0;
+							}
+						}
+
+						&:nth-child(3n+1) {
+							clear: both;
+
+							@media only screen and (max-width: @breakpoint) {
+								clear: none;
+							}
+						}
+
+						p {
+							font-size: 4.75vw;
+							line-height: 1;
+							letter-spacing: -2px;
+							color: @off-black !important;
+							font-family: @font-alt;
+
+							@media only screen and (min-width: @design-width) {
+								font-size: 6.4rem;
+							}
+
+							@media only screen and (max-width: @tablet-landscape) {
+								font-size: 5.4rem;
+							}
+
+							@media only screen and (max-width: @breakpoint) {
+								font-size: 10vw;
+							}
+						}
+
+						span {
+							display: block;
+							font-size: 1.8rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.company-hero + section.bg-white {
+	margin: 20px 0 0;
+}

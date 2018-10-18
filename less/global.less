@@ -1,0 +1,599 @@
+/**************************************************************************************************
+ *
+ *  @Section: Global Styles
+ *
+***************************************************************************************************/
+html {
+	font-size: 62.4%;
+	margin-top: 0 !important;
+}
+
+body {
+	font-size: 1.4rem;
+	line-height: 1.3;
+	padding-top: 120px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: @gray;
+	color: @text;
+	font-family: @font-main;
+
+	@media only screen and (max-width: @breakpoint) {
+		padding-top: 62px;
+	}
+
+	&.no-overflow { overflow: hidden; }
+}
+
+* { box-sizing: border-box; }
+
+a {
+	text-decoration: none;
+	display: inline-block;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:focus,
+	&:active {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 0.9;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+	color: @off-black;
+	font-family: @font-alt;
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.center { text-align: center; }
+
+.wrapper,
+section { position: relative; }
+
+section {
+	overflow: hidden;
+
+	&.bg-white {
+
+		.container {
+			background-color: @white;
+			padding: 40px;
+			padding-bottom: 40px !important;
+
+			@media only screen and (max-width: @breakpoint) {
+				padding: 20px;
+				padding-bottom: 20px !important;
+			}
+		}
+	}
+
+	&.module {
+
+		&:last-of-type {
+
+			.container {
+				padding-bottom: 40px;
+
+				@media only screen and (max-width: @breakpoint) {
+					padding-bottom: 30px;
+				}
+			}
+		}
+
+		.container {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.container {
+	width: @default-width;
+	padding: 40px 0;
+	margin: 0 auto;
+	max-width: @max-width;
+	position: relative;
+
+	&:after { .clear; }
+
+	&.white {
+		padding: 50px 7% 70px;
+		background-color: @white;
+
+		@media only screen and (max-width: @breakpoint) {
+			padding: 30px 7%;
+		}
+
+		h1 {
+			font-size: 8rem;
+			margin: 0 0 60px;
+
+			@media only screen and (max-width: @breakpoint) {
+				font-size: 5rem;
+				margin: 0 0 20px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: @breakpoint) {
+		width: @mobile-width;
+	}
+}
+
+.section-heading {
+
+	h3 {
+		font-size: 5rem;
+		display: inline-block;
+		text-transform: uppercase;
+		font-family: @font-alt;
+		line-height: 1;
+
+		@media only screen and (max-width: @breakpoint) {
+			display: block;
+			font-size: 9.5vw;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			width: 150%;
+			height: 4px;
+			background-color: @off-black;
+			margin: 0 0 15px;
+
+			@media only screen and (max-width: @breakpoint) {
+				width: 100%;
+			}
+		}
+	}
+
+	p {
+		font-size: 1.8rem;
+		margin: 0 0 35px;
+		max-width: 340px;
+
+		@media only screen and (max-width: @breakpoint) {
+			margin: 0 0 20px;
+			font-size: 4.5vw;
+		}
+	}
+
+	a {
+		.link-red;
+	}
+
+	h3 + a {
+		margin-top: 30px;
+
+		@media only screen and (max-width: @breakpoint) {
+			margin-top: 10px;
+		}
+	}
+}
+
+.error-404 {
+	margin: 40px 0;
+
+	.container {
+		padding: 85px 85px 300px;
+		background-color: @white;
+
+		@media only screen and (max-width: @breakpoint) {
+			padding: 30px 30px 150px;
+		}
+	}
+
+	h1 {
+		font-size: 8rem;
+		margin: 0 0 40px;
+
+		@media only screen and (max-width: @breakpoint) {
+			font-size: 4.5rem;
+		}
+	}
+
+	p,
+	li {
+		font-size: 2rem;
+
+		a {
+			color: @red;
+		}
+	}
+
+	p {
+		margin: 0 0 40px;
+	}
+
+	ul {
+		padding-left: 20px;
+		list-style-type: disc;
+	}
+}
+
+form {
+  position: relative;
+  width: 100%;
+
+  .titlebox {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  .form-row {
+    position: relative;
+    margin: 0 0 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      .clear;
+    }
+
+    &.half {
+
+      .form-item {
+        float: left;
+        width: 48.5%;
+
+        @media only screen and (max-width: @breakpoint) {
+          float: none;
+          width: 100%;
+        }
+
+        &:first-child {
+          margin-right: 3%;
+
+          @media only screen and (max-width: @breakpoint) {
+            margin: 0 0 30px;
+          }
+        }
+      }
+    }
+
+    .input-label {
+      display: block;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      color: rgba(0,0,0,0.37);
+      font-family: @font-main-semibold;
+    }
+
+    .form-item {
+      position: relative;
+      width: 100%;
+
+      &:after {
+        .clear;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        width: 100%;
+        font-size: 2rem;
+        letter-spacing: 0.4px;
+        padding: 12px 15px;
+        color: rgba(0,0,0,0.37);
+        background-color: @white;
+        border: solid 1px #c9c9c9;
+        color: @off-black;
+        font-family: @font-main;
+        .transition();
+
+        &::-webkit-input-placeholder {
+          color: transparent;
+        }
+
+        &:-moz-placeholder {
+          color: transparent;
+        }
+
+        &::-moz-placeholder {
+          color: transparent;
+        }
+
+        &:-ms-input-placeholder {
+          color: transparent;
+        }
+
+        &:focus {
+          background-color: @white;
+        }
+
+        &.error {
+          border-color: @red;
+        }
+      }
+
+      textarea {
+        height:  180px;
+        resize: none;
+      }
+
+      input::-ms-clear {
+        display: none;
+        visibility: hidden;
+        margin: -9999px;
+        color: transparent;
+        width: 0;
+        height: 0;
+
+        &:active,
+        &:hover,
+        &:focus {
+          display: none;
+          visibility: hidden;
+          margin: -9999px;
+          color: transparent;
+          width: 0;
+          height: 0;
+        }
+      }
+
+      input + .error + .form-label {
+        color: @red !important;
+      }
+
+      input.valid + .error + .form-label {
+        color: @green !important;
+      }
+
+      label.error {
+      	display: none !important;
+        cursor: default !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        white-space: nowrap;
+        color: @red;
+
+        &:before {
+          content: none !important;
+        }
+      }
+
+      select {
+        position: absolute;
+        display: block !important;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -5;
+      }
+
+      select.valid + label { display: none !important; }
+
+      .btn {
+      	width: 100%;
+      }
+    }
+  }
+
+  // Custom jQuery UI select styles
+  .ui-selectmenu-button {
+    width: 100% !important;
+    padding: 0;
+    outline: none;
+    border: 1px solid #c9c9c9 !important;
+    border-radius: 0;
+    background-color: @white !important;
+
+    &:hover {
+    	background-color: @white;
+    }
+
+    &.ui-selectmenu-button-open {
+      background-color: @white;
+      border-bottom: none !important;
+
+      span {
+
+        &.ui-icon {
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+        }
+      }
+    }
+
+    span {
+
+      &.ui-icon {
+        position: absolute;
+        width: 13px;
+        height: 8px;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
+        background-position: inherit;
+        background-image: url(/../img/arrow-down-gray.png);
+        background-size: contain;
+        .transition();
+      }
+
+      &.ui-selectmenu-text {
+      	padding: 15px;
+        line-height: 1;
+        font-size: 2rem;
+        color: rgba(0,0,0,0.37);
+      }
+    }
+  }
+
+  select.error + label + .ui-selectmenu-button { border: 1px solid @red !important; }
+  select.valid + label + .ui-selectmenu-button { border: 1px solid #c9c9c9 !important; }
+}
+
+.ui-menu {
+  border-top: none;
+  max-height: 30vh;
+  overflow: scroll;
+  border-radius: 0;
+  border: 1px solid #c9c9c9 !important;
+  border-top: none !important;
+
+  .ui-menu-item {
+    line-height: 1;
+    font-family: @font-main;
+    .transition();
+
+    &.ui-state-disabled {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      color: #c9c9c9;
+    }
+
+    div {
+    	padding: 15px 15px 14px;
+      border: none !important;
+      font-size: 2rem;
+      color: rgba(0,0,0,0.37);
+      font-family: @font-main;
+      .transition();
+
+      &.ui-state-active,
+      &.ui-state-focus {
+        border: none;
+        background-color: @red;
+        color: @white;
+      }
+    }
+  }
+}
+
+.btn {
+	cursor: pointer;
+	padding: 20px 40px;
+	text-align: center;
+	display: inline-block;
+	text-transform: uppercase;
+	border: none;
+	font-size: 1.6rem;
+	color: @white;
+	font-family: @font-main-semibold;
+	.transition();
+
+	&.red {
+		background-color: @red;
+
+		@media only screen and (min-width: @breakpoint) {
+
+			&:hover {
+				background-color: @dark-red;
+			}
+		}
+	}
+}
+
+.pagination {
+
+	.container {
+
+		.wp-pagenavi {
+			text-align: center;
+
+			a,
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 20px;
+				font-size: 1.6rem;
+				color: #92989d;
+				font-family: @font-main-semibold;
+				.transition();
+
+				@media only screen and (min-width: @breakpoint) {
+
+					&:hover {
+						color: @red;
+					}
+				}
+
+				&.current {
+					color: @red;
+				}
+
+				&.nextpostslink,
+				&.previouspostslink {
+					position: relative;
+					top: 1px;
+					padding: 0;
+					background-image: url(/../img/arrow-right-gray.png);
+					width: 10px;
+					height: 16px;
+					background-size: contain;
+					background-repeat: no-repeat;
+					text-indent: -9999px;
+					margin-right: 0;
+
+					@media only screen and (min-width: @breakpoint) {
+
+						&:hover {
+							background-image: url(/../img/arrow-right-red.png);
+						}
+					}
+				}
+
+				&.previouspostslink {
+					transform: rotate(180deg);
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+
+.color-logo {
+	svg {
+		path {
+
+			&.cls-1 {
+				fill: #93999e;
+			}
+
+			&.cls-2 {
+				fill: @red;
+			}
+		}
+	}
+}

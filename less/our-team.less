@@ -1,0 +1,127 @@
+/**************************************************************************************************
+ *
+ *  @Section: Our Team
+ *
+***************************************************************************************************/
+
+.our-team {
+
+  .row {
+    position: relative;
+
+    &.overlay {
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        @media only screen and (max-width: @breakpoint) {
+          content: none;
+        }
+      }
+    }
+
+    &.text-left {
+
+      &.overlay {
+
+        &:before {
+          background: -moz-linear-gradient(left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 60%);
+          background: -webkit-linear-gradient(left, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 60%);
+          background: linear-gradient(to right, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 60%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+        }
+      }
+
+      .caption-container {
+        left: 5%;
+      }
+    }
+
+    &.text-right {
+
+      &.overlay {
+
+        &:before {
+          background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 60%);
+          background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 60%);
+          background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 60%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
+        }
+      }
+
+      .caption-container {
+        right: 5%;
+      }
+    }
+
+    &.text-left,
+    &.text-right {
+
+      .caption-container {
+
+        @media only screen and (max-width: @breakpoint) {
+          position: relative;
+          transform: none;
+          top: inherit;
+          right: inherit;
+          bottom: inherit;
+          max-width: inherit;
+          left: 0;
+          padding: 40px;
+          background-color: @white;
+        }
+      }
+    }
+
+    &.white {
+
+      .caption-container {
+
+        span,
+        p {
+          color: @white;
+
+          @media only screen and (max-width: @breakpoint) {
+            color: #383d42;
+          }
+        }
+      }
+    }
+
+    img {
+
+      @media only screen and (max-width: @breakpoint) {
+
+      }
+    }
+
+    .caption-container {
+      max-width: 260px;
+      .center-vertical();
+
+      span,
+      p {
+        color: #383d42;
+      }
+
+      span {
+        display: block;
+        font-size: 3.2rem;
+        font-family: @font-main-bold;
+      }
+
+      p {
+        font-size: 1.8rem;
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+
+.global-reach + .our-team .container {
+	padding-top: 0;
+}

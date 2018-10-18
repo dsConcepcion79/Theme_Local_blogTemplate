@@ -1,0 +1,64 @@
+/**************************************************************************************************
+ *
+ *  @Section: Company Legal Page Styles
+ *
+***************************************************************************************************/
+
+.legal-container {
+	margin: 40px 0;
+
+	.container.white {
+
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+
+	h2 {
+		font-size: 4rem;
+		margin: 0 0 20px;
+		line-height: 1.2;
+
+		@media only screen and (max-width: @breakpoint) {
+			font-size: 3rem;
+		}
+	}
+
+	span {
+		display: block;
+		text-transform: uppercase;
+		margin: 0 0 40px;
+		color: rgba(0,0,0,0.37);
+		font-family: @font-main-medium;
+
+		@media only screen and (max-width: @breakpoint) {
+			margin: 0 0 20px;
+		}
+	}
+
+	p {
+		font-size: 2rem;
+		margin: 0 0 25px;
+
+		@media only screen and (max-width: @breakpoint) {
+			font-size: 1.6rem;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: @red;
+		}
+	}
+}
+
+.legal-section {
+	margin: 0 0 50px;
+	max-width: 750px;
+
+	&:last-child {
+		margin: 0;
+	}
+}

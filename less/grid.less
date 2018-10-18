@@ -1,0 +1,1237 @@
+/**************************************************************************************************
+ *
+ *  @Section: Grid Styles
+ *
+***************************************************************************************************/
+
+.grid {
+
+	.container {
+		padding-bottom: 20px;
+	}
+
+	&:last-of-type {
+
+		.container {
+			padding-bottom: 40px;
+		}
+	}
+
+	&.bg-white {
+
+		.grid-row.project .col.text .project-text-container .project-text {
+
+			@media only screen and (max-width: @breakpoint) {
+				max-width: 100%;
+			}
+		}
+
+		.grid-row.full-bleed.text-left .caption-container,
+		.grid-row.full-bleed.text-right .caption-container {
+
+			@media only screen and (max-width: @breakpoint) {
+				padding: 20px 0 30px;
+			}
+		}
+
+		.grid-row.project .col.text .project-text-container .project-text {
+
+			@media only screen and (max-width: @breakpoint) {
+				padding: 20px 0 30px;
+			}
+		}
+
+		.grid-row {
+
+			.col.text {
+
+				.project-text-container {
+
+					.project-text {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.heading-container {
+		text-align: left;
+		margin: 0 0 40px;
+
+		h2 {
+			display: inline-block;
+			font-size: 4.4rem;
+
+			@media only screen and (max-width: @breakpoint) {
+				font: 3.5rem;
+			}
+		}
+	}
+
+	span {
+		.text-colors();
+	}
+
+	.grid-row {
+		margin: 0 0 20px;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		.container {
+			padding: 30px 0 200px;
+
+			@media only screen and (max-width: @breakpoint) {
+				padding: 20px 0 100px;
+			}
+		}
+
+		.cols {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			height: 50vw;
+			max-height: 655px;
+			overflow: hidden;
+
+			@media only screen and (max-width: @breakpoint) {
+				display: block;
+				height: auto;
+				min-height: inherit;
+				max-height: inherit;
+				overflow: auto;
+			}
+
+			&:after {
+				.clear;
+			}
+
+			.col {
+				position: relative;
+				float: left;
+				margin-right: 1.5%;
+				height: 100%;
+
+				@media only screen and (max-width: @breakpoint) {
+					float: none;
+					width: 100%;
+					margin: 0 0 30px;
+
+					&:last-child {
+						margin: 0;
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&.large {
+					width: 58.5%;
+
+					@media only screen and (max-width: @breakpoint) {
+						width: 100%;
+					}
+				}
+
+				&.small {
+					width: 40%;
+
+					@media only screen and (max-width: @breakpoint) {
+						width: 100%;
+					}
+
+					.top {
+						position: relative;
+						height: 40%;
+					}
+
+					.bottom {
+						position: relative;
+						height: 60%;
+						padding-top: 4%;
+
+						@media only screen and (max-width: @breakpoint) {
+							padding-top: 0 !important;
+						}
+
+						&:after {
+							.clear;
+						}
+					}
+
+					.img-container {
+						width: 100%;
+						height: 100%;
+						padding: 0;
+
+						@media only screen and (max-width: @breakpoint) {
+							padding-bottom: 0;
+							margin-bottom: 0;
+							max-height: 300px;
+							height: 58vw;
+						}
+					}
+				}
+
+				.text-box {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					background-color: @white;
+
+					.text-box-copy {
+						width: 70%;
+						.center-both();
+
+						@media only screen and (max-width: @tablet-landscape) {
+							width: 75%;
+						}
+
+						@media only screen and (max-width: @breakpoint) {
+							position: relative;
+							padding: 20px 8%;
+							top: inherit;
+							left: inherit;
+							transform: none;
+							width: 100%;
+						}
+
+						span {
+							font-size: 3.6vw;
+							display: block;
+							margin: 0 0 10px;
+							line-height: 1;
+							letter-spacing: -2px;
+							text-transform: uppercase;
+							color: @off-black !important;
+							font-family: @font-alt;
+
+							@media only screen and (min-width: @design-width) {
+								font-size: 5rem;
+							}
+
+							@media only screen and (max-width: @breakpoint) {
+								font-size: 9.7vw;
+							}
+						}
+
+						p {
+							font-size: 1.55vw;
+							line-height: 1.5;
+							color: #383d42;
+
+							@media only screen and (min-width: @design-width) {
+								font-size: 2rem;
+							}
+
+							@media only screen and (max-width: @tablet-landscape) {
+								font-size: 1.9vw;
+							}
+
+							@media only screen and (max-width: @breakpoint) {
+								font-size: 5vw;
+								color: @text;
+								line-height: 1.3;
+							}
+						}
+					}
+				}
+
+				.img-container {
+					position: relative;
+					display: block;
+					width: 100%;
+					height: 100%;
+					overflow: hidden;
+
+					@media only screen and (max-width: @breakpoint) {
+						max-height: 300px;
+						height: 58vw;
+						padding: 0;
+					}
+
+					img {
+						min-width: 100%;
+						min-height: 100%;
+						max-height: 140%;
+						max-width: inherit;
+						.center-both;
+					}
+				}
+			}
+		}
+
+		&.large-image,
+		&.side-by-side {
+
+			&.image-right {
+
+				.col {
+
+					&.large {
+						order: 2;
+						margin: 0;
+
+						@media only screen and (max-width: @breakpoint) {
+							display: none;
+						}
+					}
+
+					&.small {
+						margin-right: 1.5%;
+
+						@media only screen and (max-width: @breakpoint) {
+							margin-right: 0;
+						}
+
+						.top {
+							display: block;
+						}
+					}
+				}
+			}
+
+			.col {
+
+				&.large {
+					width: 58.5%;
+
+					@media only screen and (max-width: @breakpoint) {
+						width: 100%;
+						margin: 0;
+					}
+				}
+
+				&.small {
+
+					.top {
+
+						@media only screen and (max-width: @breakpoint) {
+							display: none;
+						}
+					}
+
+					.bottom {
+
+						@media only screen and (max-width: @breakpoint) {
+							padding: 0 !important;
+						}
+					}
+				}
+			}
+
+			.top {
+				height: 40%;
+			}
+
+			.bottom {
+				height: 60%;
+			}
+		}
+
+		&.side-by-side {
+
+			.bottom {
+				height: 100% !important;
+				padding-top: 0 !important;
+
+				@media only screen and (max-width: @breakpoint) {
+					height: auto !important;
+				}
+			}
+		}
+
+		&.full-bleed {
+			position: relative;
+
+			&.overlay {
+
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+
+					@media only screen and (max-width: @breakpoint) {
+						content: none;
+					}
+				}
+			}
+
+			&.text-left {
+
+				&.overlay {
+
+					&:before {
+						background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0) 100%);
+						background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%);
+						background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 );
+					}
+				}
+
+				.caption-container {
+					left: 5%;
+				}
+			}
+
+			&.text-right {
+
+				&.overlay {
+
+					&:before {
+						background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,1) 100%);
+						background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,1) 100%);
+						background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 );
+					}
+				}
+
+				.caption-container {
+					right: 5%;
+				}
+			}
+
+			&.alternate {
+
+				&.text-left,
+				&.text-right {
+
+					.caption-container {
+
+						@media only screen and (max-width: @breakpoint) {
+							margin-top: -40px;
+						}
+					}
+				}
+
+				.caption-container {
+
+					@media only screen and (max-width: @breakpoint) {
+						padding: 0;
+						background-color: transparent;
+					}
+
+					span {
+
+						@media only screen and (max-width: @breakpoint) {
+							width: 90%;
+							padding: 20px;
+							color: @white !important;
+							background-color: #24272c;
+							margin: 0;
+						}
+					}
+
+					p {
+
+						@media only screen and (max-width: @breakpoint) {
+							padding: 20px;
+						}
+					}
+				}
+			}
+
+			&.text-left,
+			&.text-right {
+
+				.caption-container {
+
+					@media only screen and (max-width: @breakpoint) {
+						position: relative;
+						transform: none;
+						top: inherit;
+						right: inherit;
+						bottom: inherit;
+						max-width: inherit;
+						left: 0;
+					}
+				}
+			}
+
+			.fb-img-container {
+				position: relative;
+
+				@media only screen and (max-width: @breakpoint) {
+					max-height: 300px;
+					height: 58vw;
+					overflow: hidden;
+				}
+
+				img {
+					min-width: 100%;
+
+					@media only screen and (max-width: @breakpoint) {
+						min-width: 150%;
+						min-height: 100%;
+						max-height: 140%;
+						max-width: inherit;
+						.center-both;
+					}
+				}
+			}
+
+			.caption-container {
+				max-width: 400px;
+				z-index: 2;
+				.center-vertical();
+
+				@media only screen and (max-width: @breakpoint) {
+					padding: 20px;
+					background-color: @white;
+				}
+
+				span {
+					font-size: 3.6vw;
+					line-height: 1;
+					letter-spacing: -2px;
+					display: block;
+					text-transform: uppercase;
+					color: @white !important;
+					font-family: @font-alt;
+
+					@media only screen and (min-width: @design-width) {
+						font-size: 5rem;
+					}
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 9.7vw;
+						color: @off-black !important;
+					}
+				}
+
+				p {
+					font-size: 1.525vw;
+					line-height: 1.3;
+					color: @white;
+
+					@media only screen and (min-width: @design-width) {
+						font-size: 2rem;
+					}
+
+					@media only screen and (max-width: @tablet-landscape) {
+						font-size: 1.9vw;
+					}
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 5vw;
+						color: @text;
+						line-height: 1.3;
+					}
+				}
+
+				a {
+					margin: 25px 0 0;
+
+					@media only screen and (max-width: @breakpoint) {
+						margin: 15px 0 0;
+					}
+				}
+			}
+		}
+
+		&.vertical-image,
+		&.vertical-image-callout {
+
+			.col {
+
+				&.image {
+					width: 40%;
+
+					@media only screen and (max-width: @breakpoint) {
+						width: 100%;
+						margin-bottom: 0;
+					}
+
+					.img-container {
+						height: 100%;
+
+						@media only screen and (max-width: @breakpoint) {
+							padding-bottom: 0;
+							margin-bottom: 0;
+							height: 58vw;
+						}
+					}
+				}
+
+				&.text {
+					width: 58.5%;
+
+					@media only screen and (max-width: @breakpoint) {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&.vertical-image-callout {
+
+			&.image-right {
+
+				.col {
+
+					&.image {
+						order: 2;
+						margin: 0;
+
+						@media only screen and (max-width: @breakpoint) {
+							order: 1;
+						}
+					}
+
+					&.text {
+						margin-right: 1.5%;
+
+						@media only screen and (max-width: @breakpoint) {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+
+			.cols {
+
+				.col {
+
+					&.text {
+
+						.text-box {
+							position: relative;
+							width: 100%;
+							height: 100%;
+							background-color: @white;
+
+							.text-box-copy {
+								width: 72%;
+								.center-both();
+
+								@media only screen and (max-width: @tablet-landscape) {
+									width: 75%;
+								}
+
+								@media only screen and (max-width: @breakpoint) {
+									width: 100%;
+									position: relative;
+									transform: none;
+									top: inherit;
+									left: inherit;
+								}
+
+								span {
+									font-size: 3vw;
+
+									@media only screen and (min-width: @design-width) {
+										font-size: 4rem;
+									}
+
+									@media only screen and (max-width: @breakpoint) {
+										font-size: 9.7vw;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.text-box {
+
+					.text-box-copy {
+
+						span {
+							font-size: 3.5vw;
+
+							@media only screen and (min-width: @design-width) {
+								font-size: 4.6rem;
+							}
+
+							@media only screen and (max-width: @tablet-landscape) {
+								font-size: 3vw;
+							}
+
+							@media only screen and (max-width: @breakpoint) {
+								font-size: 9.7vw;
+							}
+						}
+					}
+				}
+			}
+
+			.top {
+				height: 65%;
+				overflow: hidden;
+				padding-bottom: 0;
+
+				&.has-caption {
+
+					.caption {
+						display: block;
+					}
+				}
+
+				.caption {
+					display: none;
+					position: absolute;
+					top: 10%;
+					right: 10%;
+					width: 50%;
+
+					@media only screen and (max-width: @breakpoint) {
+						position: relative;
+						padding: 20px 8%;
+						top: inherit;
+						right: inherit;
+						left: inherit;
+						transform: none;
+						width: 100%;
+						background-color: @white;
+					}
+
+					span,
+					p {
+						color: @white;
+
+						@media only screen and (max-width: @breakpoint) {
+							color: #383d42;
+						}
+					}
+
+					span {
+						font-size: 3.6vw;
+						line-height: 1;
+						letter-spacing: -2px;
+						display: block;
+						text-transform: uppercase;
+						color: @white !important;
+						font-family: @font-alt;
+
+						@media only screen and (min-width: @design-width) {
+							font-size: 5rem;
+						}
+
+						@media only screen and (max-width: @tablet-landscape) {
+							font-size: 3vw;
+						}
+
+						@media only screen and (max-width: @breakpoint) {
+							font-size: 9.7vw;
+							color: @off-black !important;
+						}
+					}
+
+					p {
+						font-size: 1.525vw;
+						line-height: 1.3;
+
+						@media only screen and (min-width: @design-width) {
+							font-size: 2rem;
+						}
+
+						@media only screen and (max-width: @tablet-landscape) {
+							font-size: 1.9vw;
+						}
+
+						@media only screen and (max-width: @breakpoint) {
+							font-size: 5vw;
+							color: @text;
+							line-height: 1.3;
+						}
+					}
+				}
+
+				.text-box {
+
+					span {
+						font-family: @font-main-semibold;
+						.text-colors();
+					}
+				}
+			}
+
+			.bottom {
+				height: 35%;
+				padding-top: 2%;
+
+				@media only screen and (max-width: @breakpoint) {
+					height: auto;
+					padding-top: 30px;
+					margin-top: 0;
+				}
+
+				&:after {
+					.clear;
+				}
+			}
+
+			.left,
+			.right {
+				position: relative;
+				float: left;
+				width: 49%;
+				height: 100%;
+
+				@media only screen and (max-width: @breakpoint) {
+
+					&.cta {
+						width: 100%;
+						padding-bottom: 50%;
+					}
+
+					&.image {
+
+					}
+				}
+
+				&.cta {
+					overflow: hidden;
+					background-color: @white !important;
+
+					@media only screen and (min-width: @breakpoint) {
+
+						&:hover {
+
+							p {
+
+								&:after {
+									margin-left: 15px !important;
+								}
+							}
+						}
+					}
+
+					img {
+						z-index: 0;
+						min-width: 100%;
+						min-height: 100%;
+						max-height: 140%;
+						max-width: inherit;
+						.center-both;
+					}
+
+					.cta-info {
+						padding: 30px 20px;
+						text-align: center;
+						width: 80%;
+						z-index: 1;
+						background-color: @white;
+						.center-both();
+
+						span {
+							display: none;
+							opacity: 0.5;
+							margin: 0 0 10px;
+							text-transform: uppercase;
+							letter-spacing: 1px;
+							font-size: 1.4rem;
+							color: @off-black;
+							font-family: @font-main-medium;
+						}
+
+						.title {
+							font-size: 3.5vw;
+							letter-spacing: -2px;
+							line-height: 1;
+							text-transform: uppercase;
+							color: @off-black;
+							font-family: @font-alt;
+
+							@media only screen and (min-width: @design-width) {
+								font-size: 4.6rem;
+							}
+
+							@media only screen and (max-width: @tablet-landscape) {
+								font-size: 3vw;
+							}
+
+							@media only screen and (max-width: @breakpoint) {
+								font-size: 9.7vw;
+							}
+						}
+					}
+				}
+
+				&.image {
+
+					@media only screen and (max-width: @breakpoint) {
+						display: none;
+					}
+
+					.img-container {
+						padding: 0;
+						height: 100%;
+
+						@media only screen and (max-width: @breakpoint) {
+							height: inherit;
+							width: 100%;
+							padding-bottom: 0;
+							margin-bottom: 0;
+							max-height: 300px;
+							height: 58vw;
+						}
+					}
+				}
+
+				a {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					text-indent: -9999px;
+					font-size: 0;
+					z-index: 1;
+				}
+			}
+
+			.left {
+				margin-right: 2%;
+			}
+
+			.left.cta + .right.cta {
+
+				@media only screen and (max-width: @breakpoint) {
+					margin-top: 15px;
+				}
+			}
+		}
+
+		&.informational {
+
+			.cols {
+
+				@media only screen and (max-width: @breakpoint) {
+					display: flex;
+				}
+			}
+
+			.col {
+
+				&.text {
+					width: 58.5%;
+
+					@media only screen and (max-width: @breakpoint) {
+						width: 100%;
+						order: 2;
+						margin: 0;
+					}
+				}
+
+				&.image {
+					width: 40%;
+
+					@media only screen and (max-width: @breakpoint) {
+						width: 100%;
+					}
+
+					.top {
+						height: 35%;
+
+						@media only screen and (max-width: @breakpoint) {
+							display: none;
+						}
+					}
+
+					.bottom {
+						height: 65%;
+						padding-top: 3%;
+
+						@media only screen and (max-width: @breakpoint) {
+							height: auto;
+							padding-top: 0;
+						}
+					}
+				}
+			}
+
+			.top {
+				height: 65%;
+				overflow: hidden;
+				padding-bottom: 0;
+
+				&.has-caption {
+
+					.caption {
+						display: block;
+					}
+				}
+
+				.caption {
+					display: none;
+					position: absolute;
+					top: 10%;
+					right: 10%;
+					width: 50%;
+
+					@media only screen and (max-width: @breakpoint) {
+						position: relative;
+						top: inherit;
+						right: inherit;
+						width: 100%;
+						padding: 50px 10%;
+						background-color: @white;
+					}
+
+					span,
+					p {
+						color: @white;
+
+						@media only screen and (max-width: @breakpoint) {
+							color: @text;
+						}
+					}
+
+					span {
+						display: block;
+						font-size: 3rem;
+						margin: 0 0 10px;
+						font-family: @font-main-semibold;
+					}
+
+					p {
+						font-size: 2rem;
+					}
+				}
+
+				.text-box {
+
+					span {
+						font-family: @font-main-semibold;
+						.text-colors();
+					}
+				}
+			}
+
+			.bottom {
+				height: 35%;
+				padding-top: 2%;
+
+				@media only screen and (max-width: @breakpoint) {
+					height: auto;
+					padding-top: 20px;
+					margin-top: 0;
+				}
+
+				&:after {
+					.clear;
+				}
+			}
+
+			.left,
+			.right {
+				position: relative;
+				float: left;
+				width: 49%;
+				height: 100%;
+
+				@media only screen and (max-width: @breakpoint) {
+
+					&.cta {
+						width: 100%;
+						padding-bottom: 50%;
+					}
+
+					&.image {
+
+					}
+				}
+
+				&.cta {
+					background-color: @lt-blue;
+					.bg-colors();
+
+					@media only screen and (min-width: @breakpoint) {
+
+						&:hover {
+
+							p {
+
+								&:after {
+									margin-left: 15px !important;
+								}
+							}
+						}
+					}
+
+					.cta-info {
+						position: absolute;
+						bottom: 20px;
+						left: 20px;
+
+						span {
+							display: block;
+							opacity: 0.5;
+							margin: 0 0 10px;
+							text-transform: uppercase;
+							letter-spacing: 1px;
+							font-size: 1.2rem;
+							color: @white;
+							font-family: @font-main-medium;
+						}
+
+						p {
+							font-size: 3vw;
+							text-decoration: none;
+							color: @white;
+							font-family: @font-main-semibold;
+							.arrow-white;
+
+							@media only screen and (min-width: @design-width) {
+								font-size: 3.6rem;
+							}
+
+							@media only screen and (max-width: @breakpoint) {
+								font-size: 3.6rem;
+							}
+						}
+					}
+				}
+
+				&.image {
+
+					.img-container {
+						padding: 0;
+						height: 100%;
+
+						@media only screen and (max-width: @breakpoint) {
+							display: none;
+							height: inherit;
+							padding-bottom: 0;
+							margin-bottom: 0;
+							max-height: 300px;
+							height: 58vw;
+						}
+					}
+				}
+
+				a {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					text-indent: -9999px;
+					font-size: 0;
+				}
+			}
+
+			.left {
+				margin-right: 2%;
+
+				@media only screen and (max-width: @breakpoint) {
+					margin: 0 0 20px;
+				}
+			}
+		}
+
+		&.project {
+			padding-bottom: 75px;
+
+			@media only screen and (max-width: @breakpoint) {
+				padding-bottom: 0;
+			}
+
+			.cols {
+				max-height: 520px;
+				overflow: visible;
+
+				@media only screen and (max-width: @breakpoint) {
+					display: flex;
+					max-height: inherit;
+				}
+
+				.col {
+
+					&.text {
+						position: absolute;
+						height: auto;
+						right: 0;
+						bottom: -75px;
+						width: 50%;
+						padding: 8.5%;
+						margin: 0;
+						background-color: #24272c;
+
+						@media only screen and (max-width: @breakpoint) {
+							margin-top: -40px;
+							position: relative;
+							bottom: 0;
+							padding: 0;
+							width: 100%;
+							order: 2;
+							background-color: transparent;
+						}
+					}
+
+					.text-box {
+						background-color: #24272c;
+
+						@media only screen and (max-width: @breakpoint) {
+							background-color: transparent;
+						}
+
+						.text-box-copy {
+							position: relative;
+							width: 100%;
+							top: inherit;
+							left: inherit;
+							transform: none;
+
+							@media only screen and (max-width: @breakpoint) {
+								padding: 0;
+							}
+
+							span {
+								color: @white !important;
+
+								@media only screen and (max-width: @breakpoint) {
+									width: 90%;
+									padding: 12px 20px;
+									background-color: #24272c;
+									margin: 0;
+								}
+							}
+
+							p {
+								color: @white;
+
+								@media only screen and (max-width: @breakpoint) {
+									padding: 10px 20px 10px;
+									color: @off-black;
+								}
+							}
+						}
+					}
+
+					&.image {
+						width: 70%;
+						margin: 0;
+
+						@media only screen and (max-width: @breakpoint) {
+							width: 100%;
+							max-height: 300px;
+							height: 58vw;
+							order: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.grid + .grid .container {
+	padding-top: 30px;
+}
+
+.hero + .grid .container {
+	padding-top: 30px;
+}
+
+.grid.bg-white + .grid.bg-white .container {
+	padding-top: 0 !important;
+}

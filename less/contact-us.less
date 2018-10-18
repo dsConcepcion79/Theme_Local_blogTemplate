@@ -1,0 +1,323 @@
+/**************************************************************************************************
+ *
+ *  @Section: Contact Us Styles
+ *
+***************************************************************************************************/
+
+.contact-form {
+	margin: 40px 0;
+
+	h1 {
+		font-size: 8rem;
+		margin: 0 0 60px;
+
+		@media only screen and (max-width: @breakpoint) {
+			font-size: 5rem;
+			margin: 0 0 20px;
+		}
+	}
+
+	.contact-info-container {
+		position: relative;
+
+		&:after {
+			.clear;
+		}
+
+		&.thank-you {
+
+			.form-container {
+				width: 50%;
+
+				@media only screen and (max-width: @breakpoint) {
+					width: 100%;
+				}
+
+				#contact-form {
+					display: none;
+				}
+
+				.thank-you {
+					display: block;
+				}
+			}
+
+			.questions-container {
+
+				@media only screen and (max-width: @breakpoint) {
+					display: none;
+				}
+			}
+		}
+
+		.form-container {
+			float: left;
+			width: 56%;
+			margin-right: 8%;
+
+			@media only screen and (max-width: @tablet-portrait) {
+				float: none;
+				width: 100%;
+				margin: 0;
+			}
+
+			.thank-you {
+				display: none;
+
+				> p {
+					font-size: 2.4rem;
+					margin: 0 0 55px;
+
+					a {
+						color: @red;
+					}
+				}
+
+				.company-list-container {
+					position: relative;
+
+					.company-list {
+						position: relative;
+						margin: 0 0 40px;
+
+						&:last-child {
+							margin: 0;
+						}
+
+						span {
+							display: block;
+							margin: 0 0 20px;
+							font-size: 1.6rem;
+							color: rgba(0,0,0,0.54);
+							font-family: @font-main-semibold;
+						}
+
+						ul {
+							position: relative;
+
+							&:after {
+								.clear;
+							}
+
+							li {
+								position: relative;
+								float: left;
+								width: 23.5%;
+								height: 0;
+								padding-bottom: 23.5%;
+								margin-right: 2%;
+
+								@media only screen and (max-width: @breakpoint) {
+									width: 48%;
+									padding-bottom: 48%;
+									margin-right: 4%;
+									margin-bottom: 10px;
+								}
+
+								&:nth-child(2n) {
+
+									@media only screen and (max-width: @breakpoint) {
+										margin-right: 0;
+									}
+								}
+
+								a {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									text-indent: -9999px;
+									font-size: 0;
+								}
+
+								img {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+								}
+
+								&:last-child {
+									margin-right: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.questions-container {
+		float: right;
+		width: 36%;
+
+		@media only screen and (max-width: @tablet-portrait) {
+			float: none;
+			width: 100%;
+			margin: 0 0 30px;
+		}
+
+		> p {
+			font-size: 2rem;
+			margin: 0 0 40px;
+			line-height: 1.3;
+			color: rgba(0,0,0,0.54);
+		}
+
+		.inquiry {
+			margin: 0 0 35px;
+
+			p {
+				font-size: 1.6rem;
+				color: @off-black;
+			}
+
+			strong {
+				font-family: @font-main-semibold;
+			}
+
+			a {
+				font-size: 1.6rem;
+				color: @red;
+
+				@media only screen and (min-width: @breakpoint) {
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		.social {
+
+			&:after {
+				.clear;
+			}
+
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 3%;
+
+				&:last-child {
+					margin: 0;
+				}
+
+				svg {
+					width: 16px;
+
+					@media only screen and (min-width: @breakpoint) {
+
+						&:hover {
+
+							path,
+							rect {
+								fill: @red;
+							}
+						}
+					}
+
+					path,
+					rect {
+						stroke: transparent;
+						fill: #92989d;
+						.transition();
+					}
+				}
+			}
+		}
+	}
+}
+
+.contact-locations {
+
+	h2 {
+		font-size: 5rem;
+		margin: 0 0 20px;
+	}
+
+	ul {
+
+		&:after {
+			.clear;
+		}
+
+		li {
+			float: left;
+			width: 49%;
+			margin-right: 2%;
+			margin-bottom: 40px;
+
+			@media only screen and (max-width: @breakpoint) {
+				float: none;
+				width: 100%;
+				margin: 0 0 20px;
+			}
+
+			&:nth-child(2n-1) {
+				clear: both;
+			}
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+
+			&:nth-last-child(-n+2) {
+				margin-bottom: 0;
+
+				@media only screen and (max-width: @breakpoint) {
+					margin-bottom: 50px;
+				}
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+
+			img {
+				width: 100%;
+			}
+
+			.text-container {
+				position: relative;
+				width: 70%;
+				margin-top: -60px;
+				padding: 40px;
+				z-index: 1;
+				background-color: @white;
+
+				@media only screen and (max-width: @breakpoint) {
+					width: 85%;
+					padding: 20px;
+				}
+
+				span {
+					display: block;
+					font-size: 3.6rem;
+					line-height: 1;
+					text-transform: uppercase;
+					color: @off-black;
+					font-family: @font-alt;
+				}
+
+				p {
+					font-size: 1.6rem;
+
+					a {
+						color: @red;
+					}
+				}
+			}
+		}
+	}
+}
+
+.wpcf7-form {
+	br {
+		display: none;
+	}
+}

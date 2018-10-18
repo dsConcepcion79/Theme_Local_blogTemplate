@@ -1,0 +1,168 @@
+/**************************************************************************************************
+ *
+ *  @Section: Featured Content /w Logos Styles
+ *
+***************************************************************************************************/
+
+.featured-content-logos {
+
+	.container {
+		padding: 70px 0 0;
+
+		@media only screen and (max-width: @breakpoint) {
+			width: 100%;
+		}
+	}
+
+	.header-image {
+		position: relative;
+		width: 100%;
+		max-height: 600px;
+		overflow: hidden;
+
+		@media only screen and (max-width: @breakpoint) {
+			height: 90vw;
+		}
+
+		img {
+			top: 70px;
+			width: 100%;
+
+			@media only screen and (max-width: @breakpoint) {
+				width: auto;
+				min-width: 150%;
+				min-height: 100%;
+				max-height: 140%;
+				max-width: inherit;
+				.center-both;
+			}
+		}
+	}
+
+	.company-info {
+		background-color: #24272c;
+		color: @white;
+		padding: 55px 3.5% 75px;
+		position: absolute;
+		top: 0;
+		width: 50%;
+
+		@media only screen and (max-width: @breakpoint) {
+			padding: 30px 25px 60px;
+			width: 90%;
+		}
+
+		.building-future {
+			position: relative;
+
+			&:after {
+				.clear;
+			}
+
+			h2 {
+				font-size: 6.5vw;
+				margin-right: 9%;
+				color: @white;
+				text-transform: uppercase;
+				font-family: @font-alt;
+				letter-spacing: -2.5px;
+				line-height: 0.9;
+
+				@media only screen and (min-width: @design-width) {
+					font-size: 8.6rem;
+				}
+
+				@media only screen and (max-width: @breakpoint) {
+					float: none;
+					width: 100%;
+					font-size: 13vw;
+					margin: 0 0 20px;
+				}
+			}
+
+			p {
+				font-size: 2.2rem;
+
+				@media only screen and (max-width: @breakpoint) {
+					float: none;
+					width: 100%;
+					font-size: 4.5vw;
+				}
+			}
+		}
+
+	}
+
+	.logos {
+		padding-top: 30px;
+
+		&:after {
+			.clear;
+		}
+
+		.left,
+		.right {
+			float: left;
+
+			@media only screen and (max-width: @breakpoint) {
+				float: none;
+			}
+		}
+
+		.left {
+			width: 35.5%;
+			margin-right: 16%;
+
+			@media only screen and (max-width: @breakpoint) {
+				width: @mobile-width;
+				margin: 0 auto 40px;
+			}
+		}
+
+		.right {
+			width: 48.5%;
+
+			@media only screen and (max-width: @breakpoint) {
+				width: @mobile-width;
+				margin: auto;
+			}
+
+			&:after {
+				.clear;
+			}
+
+			.company {
+				position: relative;
+				float: left;
+				width: 32.66%;
+				height: 0;
+				padding-bottom: 32.66%;
+				margin-right: 1%;
+				margin-bottom: 1%;
+				background-color: @red;
+
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				img {
+					max-width: 65%;
+					max-height: 27%;
+					.center-both();
+				}
+
+				a {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+/**************************************************************************************************
+*
+*  @Section: Search Results Page
+*
+***************************************************************************************************/
+
+.page-search-results {
+
+	.container {
+		margin: 40px auto 0;
+		padding: 40px;
+		background-color: @white;
+	}
+
+	.search-header {
+		position: relative;
+		margin: 0 0 50px;
+
+		p {
+			font-size: 2.4rem;
+			margin: 0 0 20px;
+
+			@media only screen and (max-width: @breakpoint) {
+				font-size: 1.6rem;
+			}
+
+			&.result-count {
+				margin: 0;
+			}
+		}
+
+		.search-form {
+			position: relative;
+			margin: 0 0 20px;
+
+			form {
+				margin: auto;
+
+				input {
+					width: 100%;
+					border: none;
+					font-size: 8rem;
+					color: rgba(0,0,0,0.54);
+					border-bottom: 2px solid rgba(0,0,0,0.12);
+					text-transform: uppercase;
+					color: @off-black;
+					font-family: @font-alt;
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 5rem;
+						padding-bottom: 0 0 10px;
+					}
+				}
+
+				button {
+					cursor: pointer;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					width: 24px;
+					height: 24px;
+					background-image: url(/../img/icon-search.png);
+					background-repeat: no-repeat;
+					background-size: contain;
+					border: none;
+					background-color: transparent;
+					text-indent: -9999px;
+				}
+			}
+		}
+	}
+
+	.search-results {
+
+		ul {
+
+			li {
+				max-width: 748px;
+				margin: 0 0 50px;
+
+				&:last-child {
+					margin: 0;
+				}
+
+				span {
+					display: block;
+					font-size: 1.5rem;
+					text-transform: uppercase;
+					margin: 0 0 10px;
+					color: #92989d;
+					font-family: @font-main-semibold;
+				}
+
+				p {
+					font-size: 2rem;
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 1.6rem;
+					}
+
+					&.result-title {
+						margin: 0 0 10px;
+						font-size: 4rem;
+						color: #383d42;
+						line-height: 1;
+						text-transform: uppercase;
+						font-family: @font-alt;
+
+						@media only screen and (max-width: @breakpoint) {
+							font-size: 3rem;
+						}
+
+						a {
+							color: #383d42;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-search-results + .pagination {
+
+	.container {
+		margin: 0 auto 40px;
+		background-color: @white;
+	}
+}

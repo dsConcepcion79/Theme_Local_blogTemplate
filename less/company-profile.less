@@ -1,0 +1,175 @@
+/**************************************************************************************************
+ *
+ *  @Section: Company Profile Page Styles
+ *
+***************************************************************************************************/
+
+.company-profile {
+	background-color: #f6f6f6;
+
+	.our-initiatives {
+
+		.projects-container {
+			position: relative;
+			margin: 0 0 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&.cols {
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-direction: row;
+				flex-direction: row;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+			}
+
+			&.full-bleed {
+
+				.caption-container {
+					right: 5%;
+					max-width: 30%;
+					.center-vertical();
+
+					@media only screen and (max-width: @breakpoint) {
+						position: relative;
+						transform: none;
+						top: inherit;
+						right: inherit;
+						bottom: inherit;
+						max-width: inherit;
+						padding: 40px;
+						background-color: @white;
+					}
+
+					span,
+					p {
+						color: @white;
+
+						@media only screen and (max-width: @breakpoint) {
+							color: @text;
+						}
+					}
+
+					span {
+						display: block;
+						font-size: 3rem;
+						margin: 0 0 10px;
+					}
+
+					p {
+						font-size: 2rem;
+					}
+				}
+			}
+
+			&:after {
+				.clear;
+			}
+
+			.col {
+				float: left;
+
+				@media only screen and (max-width: @breakpoint) {
+					float: none;
+				}
+			}
+
+			.project-img {
+				width: 60%;
+
+				@media only screen and (max-width: @breakpoint) {
+					width: 100%;
+					order: 1;
+				}
+
+				.img-container {
+					position: relative;
+					display: block;
+					width: 100%;
+					height: 100%;
+					overflow: hidden;
+
+					@media only screen and (max-width: @breakpoint) {
+
+						&:before {
+							content: '';
+							position: absolute;
+							display: block;
+							width: 100%;
+							height: 100%;
+							background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+							background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+							background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66000000',GradientType=0 );
+						}
+					}
+
+					img {
+						min-width: 100%;
+						min-height: 100%;
+						max-width: 125%;
+						.center-both;
+
+						@media only screen and (max-width: @breakpoint) {
+							position: relative;
+							max-width: 100%;
+							transform: none;
+							top: inherit;
+							left: inherit;
+							z-index: -1;
+						}
+					}
+				}
+			}
+
+			.project-info {
+				width: 40%;
+				background-color: @white;
+
+				@media only screen and (max-width: @breakpoint) {
+					width: 100%;
+					order: 2;
+				}
+
+				.project-text-container {
+					min-height: 60vh;
+					max-height: 510px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					@media only screen and (max-width: @breakpoint) {
+						display: block;
+						max-height: inherit;
+						min-height: inherit;
+					}
+
+					.project-text {
+						padding: 20px 0;
+						max-width: 60%;
+						margin: auto;
+
+						@media only screen and (max-width: @breakpoint) {
+							max-width: 85%;
+							padding: 40px 0;
+						}
+
+						span {
+							display: block;
+							font-size: 3rem;
+							color: #23272b;
+							margin: 0 0 10px;
+						}
+
+						p {
+							font-size: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

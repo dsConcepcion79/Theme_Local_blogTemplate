@@ -1,0 +1,215 @@
+/**************************************************************************************************
+ *
+ *  @Section: Global Reach Map Styles
+ *
+***************************************************************************************************/
+
+.global-reach-map {
+
+	.container {
+		padding: 100px 0;
+
+		@media only screen and (max-width: @breakpoint) {
+			width: 100%;
+			padding: 50px 0 75px;
+		}
+	}
+
+	.map-container {
+		position: relative;
+		margin: 0 0 100px;
+
+		@media only screen and (max-width: @breakpoint) {
+			margin: 0 0 80px;
+		}
+
+		.map-img-container {
+
+			@media only screen and (max-width: @breakpoint) {
+				margin: 0 0 10px;
+				overflow: scroll;
+				-webkit-overflow-scrolling: touch;
+
+				&::-webkit-scrollbar {
+					width: 0;
+					height: 0;
+					background: transparent;
+				}
+
+				&::-webkit-scrollbar-button {
+					width: 0;
+					height: 0;
+					background: transparent;
+				}
+			}
+
+			img.bg-map {
+
+				@media only screen and (max-width: @breakpoint) {
+					max-width: inherit;
+					height: 550px;
+					max-height: 70vh;
+				}
+			}
+		}
+
+		.legend {
+			position: absolute;
+			display: block;
+			padding: 30px;
+			bottom: 0;
+			left: 0;
+			background-color: @white;
+
+			@media only screen and (max-width: @breakpoint) {
+				position: relative;
+				margin: auto;
+				width: @mobile-width;
+			}
+
+			ul {
+
+				li {
+					font-size: 1.4rem;
+					display: block;
+					margin: 0 0 10px;
+					vertical-align: middle;
+					color: @off-black;
+
+					&:before {
+						content: '';
+						position: relative;
+						top: -2px;
+						display: inline-block;
+						vertical-align: middle;
+						width: 12px;
+						height: 12px;
+						border-radius: 50%;
+						margin-right: 10px;
+					}
+
+					&:last-child {
+						margin: 0;
+					}
+
+					&.global-reach-gaf {
+
+						&:before {
+							background-color: @red;
+						}
+					}
+
+					&.global-reach-bmi {
+
+						&:before {
+							background-color: @lt-blue;
+						}
+					}
+
+					&.global-reach-sgi {
+
+						&:before {
+							background-color: @sgi-green;
+						}
+					}
+
+					&.global-reach-siplast {
+
+						&:before {
+							background-color: @dark-blue;
+						}
+					}
+
+					&.global-reach-products-sold {
+
+						&:before {
+							border-radius: 0;
+							background-color: #a8c9d3;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.stats {
+		position: relative;
+
+		@media only screen and (max-width: @breakpoint) {
+			margin: auto;
+			width: @mobile-width;
+		}
+
+		ul {
+			position: relative;
+
+			&:after {
+				.clear;
+			}
+
+			li {
+				float: left;
+				width: 20.125%;
+				margin-right: 6.5%;
+
+				@media only screen and (max-width: @breakpoint) {
+					width: 45%;
+					margin-right: 10%;
+					margin-bottom: 50px;
+				}
+
+				&:nth-child(2n) {
+
+					@media only screen and (max-width: @breakpoint) {
+						margin-right: 0;
+					}
+				}
+
+				&:nth-child(2n-1) {
+
+					@media only screen and (max-width: @breakpoint) {
+						clear: both;
+					}
+				}
+
+				&:nth-last-child(-n+2) {
+
+					@media only screen and (max-width: @breakpoint) {
+						margin-bottom: 0;
+					}
+				}
+
+				&:before {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: rgba(0,0,0,0.2);
+					margin: 0 0 20px;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				h2 {
+					font-size: 8rem;
+					letter-spacing: -3px;
+					font-family: @font-alt;
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 5rem;
+					}
+				}
+
+				p {
+					font-size: 2.4rem;
+
+					@media only screen and (max-width: @breakpoint) {
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+	}
+}

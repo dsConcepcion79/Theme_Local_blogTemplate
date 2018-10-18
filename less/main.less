@@ -1,0 +1,339 @@
+/*
+Theme Name: Standard Industries
+Theme URI: https://github.com/mediarain/standard-industries-website/
+Author: Rain Agency
+Author URI: http://rain.agency
+Description: Website for Standard Industries
+Version: 0.0.1
+License: The MIT License (MIT)
+License URI: http://opensource.org/licenses/MIT
+Text Domain: standard-industries
+*/
+
+/**************************************************************************************************
+ *
+ *  @Section: Varaibles
+ *
+***************************************************************************************************/
+// colors
+@white:       #FFFFFF;
+@black:       #000000;
+@off-black:   #23272b;
+@off-white:   #f5f5f5;
+@green:       #439d01;
+@dark-green:	#3d8e01;
+@sgi-green:		#084c1d;
+@orange:      #ec6e06;
+@blue:        #0a4f88;
+@lt-blue:     #00aeef;
+@dark-blue:		#00529c;
+@red:         #f42434;
+@dark-red:		#d01d27;
+@yellow:      #eab600;
+@dark-yellow:	#dcae10;
+@gray:        #f6f6f6;
+@teal:        #2f92b2;
+@dark-teal:		#2a86a3;
+@purple:			#53104c;
+
+@text:        #7e8085;
+
+//  media query breakpoints
+@default-width:     94%;
+@mobile-width:      87%;
+@default-min-width: 728px; // At the smallest width for desktop, this will provide a little padding on the sides.
+@max-width:         1240px;
+@design-width:      1320px;
+
+@breakpoint:        767px;
+@tablet-landscape:  1024px;
+@tablet-portrait:   768px;
+@mobile:            320px;
+@desktop:           1200px;
+
+/**************************************************************************************************
+ *
+ *  @Section: Fonts
+ *
+***************************************************************************************************/
+
+@font-main:             'CalibreWeb-Regular';
+@font-main-bold:        'CalibreWeb-Bold';
+@font-main-medium:      'CalibreWeb-Medium';
+@font-main-semibold:    'CalibreWeb-Semibold';
+@font-main-italic:      'CalibreWeb-RegularItalic';
+@font-main-bold-italic: 'CalibreWeb-BoldItalic';
+
+@font-alt:            'AlternateGotNo2D';
+
+@font-alt-2:          'FiraMono-Regular';
+@font-alt-bold-2:     'FiraMono-Bold';
+
+/**************************************************************************************************
+ *
+ *  @Section: Mixins
+ *
+***************************************************************************************************/
+.clear {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
+.center-vertical {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.center-horizontal {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.center-both {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.transition(@property: all, @duration:0.2s, @ease:ease-out) {
+	-webkit-transition: @property @duration @ease;
+	-moz-transition: @property @duration @ease;
+	-o-transition: @property @duration @ease;
+	transition: @property @duration @ease;
+}
+
+.transition-delay(@d: 0.4s) {
+	-webkit-transition-delay: @d;
+	-moz-transition-delay: @d;
+	-ms-transition-delay: @d;
+	-o-transition-delay: @d;
+	transition-delay: @d;
+}
+
+.transform(@arguments) {
+	-webkit-transform: @arguments;
+	-moz-transform: @arguments;
+	-o-transform: @arguments;
+	-ms-transform: @arguments;
+	transform: @arguments;
+}
+
+.arrow {
+
+	@media only screen and (min-width: @breakpoint) {
+
+		&:hover {
+
+			&:after {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	&:after {
+		content: '';
+		position: relative;
+		vertical-align: middle;
+		background-image: url(/../img/arrow-right-white.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		white-space: nowrap;
+		padding-left: 7px;
+		margin-left: 10px;
+		.transition();
+	}
+}
+
+.arrow-white {
+	.arrow;
+
+	&:after {
+		background-image: url(/../img/arrow-right-white.png);
+	}
+}
+
+.arrow-red {
+	.arrow;
+
+	&:after {
+		background-image: url(/../img/arrow-right-red.png);
+	}
+}
+
+.arrow(@color: @white, @scale: 7px) {
+
+	@media only screen and (min-width: @breakpoint) {
+
+		&:hover {
+
+			&:after {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	&:after {
+		content: '';
+		position: relative;
+		vertical-align: middle;
+		background-image: url(/../img/arrow-right-@color.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		padding-left: @scale;
+		margin-left: 10px;
+		.transition();
+	}
+}
+
+.link-red {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: @red;
+	font-family: @font-main-semibold;
+	.arrow-red;
+
+	&:after {
+		top: -2px;
+		padding-left: 7px;
+	}
+
+	&:focus,
+	&:active {
+		color: @red;
+	}
+}
+
+// Color classes to change color of text.
+.text-colors {
+
+	&.orange {
+		color: @orange;
+	}
+
+	&.blue {
+		color: @lt-blue;
+	}
+
+	&.yellow {
+		color: @yellow;
+	}
+
+	&.green {
+		color: @green;
+	}
+
+	&.red {
+		color: @red;
+	}
+
+	&.dark-blue {
+		color: @dark-blue;
+	}
+
+	&.sgi-green {
+		color: @sgi-green;
+	}
+
+	&.teal {
+		color: @teal;
+	}
+}
+
+// Color classes to change bg color.
+.bg-colors {
+
+	&.green {
+		background-color: @green;
+	}
+
+	&.teal {
+		background-color: @teal;
+	}
+
+	&.yellow {
+		background-color: @yellow;
+	}
+
+	&.orange {
+		background-color: @orange;
+	}
+
+	&.purple {
+		background-color: @purple;
+	}
+
+	&.blue {
+		background-color: @blue;
+	}
+}
+
+/**************************************************************************************************
+ *
+ *  @Section: Imports
+ *
+***************************************************************************************************/
+
+// Components.
+@import "reset";
+@import "header";
+@import "footer";
+@import "global";
+
+// Modules.
+@import "lead-story";
+@import "featured-story";
+@import "featured-content-logos";
+@import "global-reach-facts";
+@import "global-reach-map";
+@import "site-linking";
+@import "hero";
+@import "grid";
+@import "our-team";
+@import "work-callout";
+@import "work-links";
+@import "image-gallery";
+@import "our-brands";
+@import "company-grid";
+@import "team-grid";
+@import "team-homepage";
+@import "company-hero";
+@import "media-hero";
+
+// Libs.
+@import "slick";
+@import "jquery-ui";
+
+// Pages.
+@import "company-profile";
+@import "sustainability";
+@import "article";
+@import "innovation";
+@import "our-stories";
+@import "press-releases";
+@import "press-release";
+@import "search";
+@import "legal";
+@import "sitemap";
+@import "history";
+@import "contact-us";

@@ -1,0 +1,146 @@
+<?php
+/**
+ * Large image row module.
+ *
+ * @package standard-industries
+ */
+
+use Rain\Modules;
+
+$modules = Modules::get_instance();
+
+$modules->add_module('Large image', 'grid-large-image', 'page_modules',
+	array(
+		array(
+			'key' => 'field_598dfa5038cb0',
+			'label' => 'Heading',
+			'name' => 'heading',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '75',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_59adcc42df5be',
+			'label' => 'Heading Color',
+			'name' => 'heading_color',
+			'type' => 'clone',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'clone' => array(
+				0 => 'field_599c98469795c',
+			),
+			'display' => 'seamless',
+			'layout' => 'block',
+			'prefix_label' => 0,
+			'prefix_name' => 0,
+		),
+		array(
+			'key' => 'field_598dfa5738cb1',
+			'label' => 'Text',
+			'name' => 'text',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => 3,
+			'new_lines' => '',
+		),
+		array(
+			'key' => 'field_598df9bb38cae',
+			'label' => 'Large Image',
+			'name' => 'large_image',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '50%',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_598dfa1f38caf',
+			'label' => 'Small Image',
+			'name' => 'small_image',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '50%',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_598dfa9238cb2',
+			'label' => 'Orientation',
+			'name' => 'orientation',
+			'type' => 'radio',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'Left' => 'Left',
+				'Right' => 'Right',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'save_other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+		),
+	)
+);

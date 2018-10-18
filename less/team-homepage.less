@@ -1,0 +1,118 @@
+/**************************************************************************************************
+ *
+ *  @Section: Team Homepage Styles
+ *
+***************************************************************************************************/
+
+.team-homepage {
+
+	.container {
+		padding: 80px 0 0;
+	}
+
+	.section-heading {
+		margin: 0 0 60px;
+
+		@media only screen and (max-width: @breakpoint) {
+			margin: 0 0 30px;
+		}
+	}
+
+	.team-grid-container {
+		position: relative;
+		height: 46vw;
+		max-height: 620px;
+
+		@media only screen and (max-width: @breakpoint) {
+			height: 174vw;
+			max-height: inherit;
+		}
+
+		.box {
+			float: left;
+			width: 50%;
+			height: 100%;
+
+			@media only screen and (max-width: @breakpoint) {
+				width: 100%;
+				float: none;
+				height: 50%;
+			}
+
+			&.left {
+
+				&:after {
+					content: '';
+					display: block;
+					clear: both;
+					height: 0;
+					line-height: 0;
+				}
+
+				.box-inner {
+					float: left;
+					width: 50%;
+					height: 100%;
+					position: relative;
+					overflow: hidden;
+					.top,
+					.bottom {
+						height: 50%;
+						position: relative;
+						overflow: hidden;
+					}
+
+					.top {
+					}
+
+					.bottom {
+					}
+				}
+				.inner-left {
+					img {
+						left: 58%;
+					}
+				}
+			}
+
+			&.right {
+				position: relative;
+				overflow: hidden;
+			}
+		}
+
+
+		.box,
+		.box-inner {
+
+			&.square {
+
+				img {
+					width: 100% !important;
+					height: 100% !important;
+				}
+			}
+
+			&.rec {
+
+				img {
+					height: 100% !important;
+					max-width: inherit;
+				}
+			}
+		}
+
+		img {
+			min-width: 100%;
+			min-height: 100%;
+			.center-both;
+		}
+
+		.fade {
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+			-moz-transition: opacity 1s ease-in-out;
+			-webkit-transition: opacity 1s ease-in-out;
+		}
+	}
+}

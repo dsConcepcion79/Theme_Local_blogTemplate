@@ -1,0 +1,18 @@
+
+
+.wp-block-youtube-cover-image {
+	position: relative;
+    background-size: cover;
+    height: 430px;
+    width: 100%;
+    margin: 0;
+    padding: 50px;
+}
+
+.wp-block-youtube-cover-image > div {
+	margin-bottom: 20px;
+}
+
+.wp-block-youtube-cover-image input {
+	width: 100%;
+}

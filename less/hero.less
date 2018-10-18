@@ -1,0 +1,121 @@
+	/**************************************************************************************************
+	 *
+	 *  @Section: Hero Styles
+	 *
+	***************************************************************************************************/
+
+	.hero {
+		margin-top: -122px;
+
+		@media only screen and (max-width: @breakpoint) {
+			margin-top: 0;
+		}
+
+		.container {
+			padding-top: 0;
+			max-width: inherit;
+			width: 100%;
+
+			&.no-image {
+				width: 100%;
+
+				.hero-image {
+					height: 230px;
+					@media only screen and (max-width: @breakpoint) {
+						height: 60px;
+					}
+				}
+			}
+		}
+
+		.hero-image {
+			position: relative;
+			overflow: hidden;
+			height: 50vw;
+			max-height: 665px;
+
+			@media only screen and (max-width: @breakpoint) {
+				height: 58vw;
+				max-height: 300px;
+			}
+
+			img {
+				min-width: 100%;
+				min-height: 100%;
+				max-width: 125%;
+				.center-both();
+
+				@media only screen and (max-width: @breakpoint) {
+					min-width: 150%;
+					min-height: 100%;
+					max-height: 140%;
+					max-width: inherit;
+				}
+			}
+		}
+
+		.container {
+
+			.hero-text {
+				position: relative;
+				width: @default-width;
+				max-width: @max-width;
+				padding: 35px 40px;
+				margin: -80px auto 0;
+				z-index: 1;
+				background-color: @white;
+
+				@media only screen and (max-width: @breakpoint) {
+					padding: 30px 6.5%;
+					margin: -40px auto 0;
+					width: @mobile-width;
+				}
+
+				&:after {
+					.clear;
+				}
+
+				h1,
+				h2,
+				p {
+					float: left;
+				}
+
+				h1,
+				h2 {
+					font-size: 6.5vw;
+					margin-right: 5%;
+					width: 52%;
+					text-transform: uppercase;
+					font-family: @font-alt;
+
+					@media only screen and (min-width: @design-width) {
+						font-size: 8.6rem;
+					}
+
+					@media only screen and (max-width: @breakpoint) {
+						float: none;
+						width: 100%;
+						font-size: 13vw;
+						margin: 0 0 5px;
+					}
+				}
+
+				p {
+					font-size: 2.4rem;
+					width: 43%;
+					line-height: 1.3;
+
+					@media only screen and (max-width: @tablet-landscape) {
+						font-size: 2rem;
+					}
+
+					@media only screen and (max-width: @breakpoint) {
+						float: none;
+						width: 100%;
+						font-size: 5.8vw;
+					}
+				}
+			}
+		}
+	}

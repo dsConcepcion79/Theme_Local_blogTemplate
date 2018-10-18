@@ -1,0 +1,155 @@
+<?php
+/**
+ * Companies grid module.
+ *
+ * @package standard-industries
+ */
+
+use Rain\Modules;
+
+$modules = Modules::get_instance();
+
+$modules->add_module(
+	'Companies Grid', 'companies-grid', 'page_modules',
+	array(
+		array(
+			'key' => 'field_59b07191a947b',
+			'label' => 'Companies',
+			'name' => 'companies',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => 'field_59b07268a947c',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'row',
+			'button_label' => 'Add Company',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_59b07277a947d',
+					'label' => 'Description',
+					'name' => 'description',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_59b07285a947e',
+					'label' => 'Image',
+					'name' => 'image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'url',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_59b0729da947f',
+					'label' => 'Logo',
+					'name' => 'logo',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'url',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_59b072aca9480',
+					'label' => 'Link',
+					'name' => 'link',
+					'type' => 'page_link',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'post_type' => array(
+						0 => 'page',
+					),
+					'taxonomy' => array(),
+					'allow_null' => 0,
+					'allow_archives' => 1,
+					'multiple' => 0,
+				),
+				array(
+					'key' => 'field_59bc830abe0e3e',
+					'label' => 'Company Color',
+					'name' => 'company_color',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'choices' => array(
+						'#00aeef' => 'BMI',
+						'#ed212c' => 'GAF',
+						'#084c1d' => 'SGI',
+						'#00529c' => 'Siplast',
+						'#6e9dcc' => 'Winter',
+						'#9196a6' => '40 North',
+						'#ffffff' => 'Schiedel',
+					),
+					'default_value' => array(),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'ajax' => 0,
+					'return_format' => 'value',
+					'placeholder' => '',
+				),
+			),
+		),
+	)
+);

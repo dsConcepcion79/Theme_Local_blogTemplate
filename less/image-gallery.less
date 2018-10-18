@@ -1,0 +1,32 @@
+/**************************************************************************************************
+ *
+ *  @Section: Image Gallery Styles
+ *
+***************************************************************************************************/
+
+.image-gallery {
+	position: relative;
+	padding: 50px 0 100px;
+
+	ul {
+
+		li {
+			padding: 5px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.slick-slide {
+		transform: scale(0.9);
+		opacity: 0.4;
+		.transition();
+
+		&.slick-center {
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+}

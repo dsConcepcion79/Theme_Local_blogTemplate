@@ -1,0 +1,283 @@
+/**************************************************************************************************
+ *
+ *  @Section: History
+ *
+***************************************************************************************************/
+
+.history-container {
+	padding: 80px 0 40px;
+
+	@media only screen and (max-width: @breakpoint) {
+		margin: 0;
+		width: 100%;
+	}
+
+	.container {
+		padding: 80px 0 100px;
+
+		@media only screen and (max-width: @breakpoint) {
+			width: 80%;
+			padding: 40px 0 0;
+		}
+	}
+
+	.history-hero {
+
+		.img-container {
+			position: relative;
+			overflow: hidden;
+
+			@media only screen and (max-width: @breakpoint) {
+				max-height: 300px;
+				height: 58vw;
+			}
+
+			img {
+				width: 100%;
+
+				@media only screen and (max-width: @breakpoint) {
+					min-width: 150%;
+					min-height: 100%;
+					max-height: 140%;
+					max-width: inherit;
+					.center-both();
+				}
+			}
+		}
+	}
+
+	.timeline-container {
+		position: relative;
+
+		.timeline {
+			position: relative;
+			overflow: hidden;
+			padding-top: 120px;
+
+			.timeline-item-container {
+
+				&:after {
+					.clear;
+				}
+
+				&:hover {
+
+					.slick-arrow {
+						opacity: 1;
+					}
+				}
+
+				.slick-prev,
+				.slick-next {
+					background-image: none;
+					width: 80px;
+					height: 100%;
+					opacity: 0;
+					.transition();
+
+					&:after {
+						content: '';
+						display: block;
+						width: calc(21px / 1.5);
+						height: calc(35px / 1.5);
+						background-size: contain;
+						background-repeat: no-repeat;
+						.center-both();
+					}
+
+					&.slick-prev {
+						left: 0;
+						background: -moz-linear-gradient(left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+						background: -webkit-linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%);
+						background: linear-gradient(to right, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#00000000',GradientType=1 );
+
+						&:after {
+							background-image: url(img/arrow-left.png);
+						}
+					}
+
+					&.slick-next {
+						right: 0;
+						background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+						background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+						background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=1 );
+
+						&:after {
+							background-image: url(img/arrow-right.png);
+						}
+					}
+
+					&.slick-disabled {
+						opacity: 0;
+					}
+				}
+
+				.slick-track {
+					display: flex;
+				}
+
+				.slick-slide {
+					position: relative;
+					margin: 0 10px;
+					background-color: @white;
+					height: auto !important;
+				}
+
+				.slick-list {
+					margin: 0 -10px;
+					overflow: inherit;
+				}
+
+				.timeline-item {
+
+					&:first-child {
+
+						&:before {
+							content: none;
+						}
+					}
+
+					&:last-child {
+
+						&:after {
+							content: none;
+						}
+					}
+
+					&:before,
+					&:after {
+						content: '';
+						position: absolute;
+						display: block;
+						width: calc(~'50% + 10px');
+						top: -115px;
+						height: 1px;
+						background-color: rgba(0,0,0,0.21);
+					}
+
+					&:after {
+						right: -10px;
+					}
+
+					&:before {
+						left: -10px;
+					}
+
+					@media only screen and (max-width: @breakpoint) {
+
+					}
+
+					span {
+						position: absolute;
+						top: -120px;
+						left: 0;
+						right: 0;
+						margin: auto;
+						display: block;
+						text-align: center;
+						font-size: 6rem;
+						letter-spacing: -3px;
+						color: @off-black;
+						font-family: @font-alt;
+
+						&:before {
+							content: '';
+							display: block;
+							margin: 0 auto 10px;
+							width: 11px;
+							height: 11px;
+							border-radius: 50%;
+							background-color: @black;
+						}
+					}
+
+					.timeline-item-content {
+						background-color: @white;
+
+						.img-container {
+							display: block;
+							width: 100%;
+							overflow: hidden;
+
+							@media only screen and (min-width: @breakpoint) {
+
+								&:hover {
+
+									img {
+										-webkit-transform: scale(1.1);
+										-moz-transform: scale(1.1);
+										-ms-transform: scale(1.1);
+										-o-transform: scale(1.1);
+										transform: scale(1.1);
+									}
+								}
+							}
+
+							img {
+								width: 100%;
+								.transition(0.4s);
+							}
+						}
+
+						.text-container {
+							padding: 40px;
+
+							@media only screen and (max-width: @breakpoint) {
+								padding: 20px;
+							}
+
+							p {
+								font-size: 1.8rem;
+								margin: 0 0 10px;
+
+								@media only screen and (max-width: @breakpoint) {
+									font-size: 1.6rem;
+								}
+
+								&:last-of-type {
+									margin: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.timeline-break {
+				position: relative;
+				width: 100%;
+				background-color: @white;
+				height: 20px;
+				margin: 20px 0 60px;
+
+				&:before,
+				&:after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 40px;
+					height: 1px;
+					left: 0;
+					right: 0;
+					margin: auto;
+					background-color: @black;
+
+					@media only screen and (max-width: @breakpoint) {
+						right: inherit;
+						left: -20px;
+					}
+				}
+
+				&:before {
+					top: 0;
+				}
+
+				&:after {
+					bottom: 0;
+				}
+			}
+		}
+	}
+}
